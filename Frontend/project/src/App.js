@@ -1,17 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/Header';
-import { useState } from 'react';
+import React from "react";
+import Theme from "./components/Theme";
 
-function App() {
-  const [count, setCount] = useState(0)
-  return (
-    <>
-    <Header val={count}/>
-    <button onClick={()=>setCount(count+1)}>inc</button>
-    <button onClick={()=>setCount(count-1)}>dec</button>
-    </>
-  );
+export default function App() {
+  return <>
+    <Theme/>      
+  </>
 }
-
-export default App;
