@@ -1,8 +1,8 @@
 import React from "react";
-import Theme from "./components/Theme";
+import Form from "./components/Form";
 
 export default function App() {
   return <>
-    <Theme/>      
+    <Form/>      
   </>
 }
