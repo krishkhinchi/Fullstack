@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const connectDb = require("./config/db");
 const userModel = require("./model/userSchema");
+const bcrypt=require('bcrypt')
 
 connectDb();
 app.use(express.json());
@@ -17,7 +18,9 @@ app.post("/register", async (req, res) => {
   if (userExist) {
     res.send({ message: "User Exist" });
   }
-  const newUser = new userModel({ name, email, password });
+  const salt=bcrypt.genSalt()
+  const hash_password=await bcrypt.hash(password,salt)
+  const newUser = new userModel({ name, email,password:hash_password });
   await newUser.save();
   res.send({ message: "User Created Successfully" });
 });
