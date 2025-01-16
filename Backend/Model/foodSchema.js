@@ -16,7 +16,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Lentils, onions, tomatoes, spices",
             Rating: 4.7,
             Quantity: 300,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Rich and flavorful, made with traditional methods"
         },
         AlooGobi: {
             Description: "Potatoes and cauliflower cooked with onions, tomatoes, and spices",
@@ -24,7 +24,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Potatoes, cauliflower, onions, tomatoes, spices",
             Rating: 4.3,
             Quantity: 250,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Homemade taste with fresh vegetables"
         },
         ChanaMasala: {
             Description: "Chickpeas cooked with onions, tomatoes, and spices",
@@ -32,7 +32,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Chickpeas, onions, tomatoes, spices",
             Rating: 4.0,
             Quantity: 200,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Authentic flavors with a hint of spice"
         },
         PalakPaneer: {
             Description: "Paneer cooked with spinach and spices",
@@ -40,7 +40,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Paneer, spinach, spices",
             Rating: 4.6,
             Quantity: 250,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Smooth and rich, made with fresh spinach"
         },
         CholeBhature: {
             Description: "Chickpeas cooked with onions, tomatoes, and spices",
@@ -56,7 +56,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Rice, mixed vegetables, spices",
             Rating: 4.3,
             Quantity: 250,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Fragrant and flavorful, served with raita"
         },
         MethiThepla: {
             Description: "Fluffy bread stuffed with fenugreek leaves and spices",
@@ -64,7 +64,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Flour, fenugreek leaves, spices",
             Rating: 4.1,
             Quantity: 150,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Soft and delicious, perfect for breakfast"
         },
         BainganBharta: {
             Description: "Grilled eggplant cooked with onions, tomatoes, and spices",
@@ -72,7 +72,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Eggplant, onions, tomatoes, spices",
             Rating: 4.0,
             Quantity: 200,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Smoky flavor with a rich texture"
         },
         PyaazKachori: {
             Description: "Deep-fried pastry filled with onions and spices",
@@ -88,7 +88,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Chickpea flour, spices",
             Rating: 4.2,
             Quantity: 150,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Light and fluffy, served with green chutney"
         },
         PavBhaji: {
             Description: "A popular street food in India, consisting of a spicy vegetable curry served with bread",
@@ -96,7 +96,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Bread, vegetables, spices",
             Rating: 4.5,
             Quantity: 200,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Street-style taste, freshly made"
         }
     },
     NonVegetarianDishes: {
@@ -114,7 +114,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Chicken, onions, tomatoes, spices",
             Rating: 4.7,
             Quantity: 300,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Rich and indulgent, a must-try"
         },
         ChickenBiryani: {
             Description: "Aromatic rice cooked with chicken and spices",
@@ -122,7 +122,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Rice, chicken, spices",
             Rating: 4.5,
             Quantity: 200,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Aromatic and flavorful, served with raita"
         },
         TandooriChicken: {
             Description: "Chicken marinated in yogurt and spices, then grilled to perfection",
@@ -130,7 +130,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Chicken, yogurt, spices",
             Rating: 4.6,
                Quantity: 250,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Smoky and juicy, served with mint chutney"
         },
         FishCurry: {
             Description: "Fish cooked with onions, tomatoes, and spices",
@@ -138,7 +138,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Fish, onions, tomatoes, spices",
             Rating: 4.5,
             Quantity: 200,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Fresh and zesty, perfect for seafood lovers"
         }   
     },
     Desserts: {
@@ -148,7 +148,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Flour, sugar, spices",
             Rating: 4.0,
             Quantity: 100,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Sweet and indulgent, a perfect end to a meal"
         },
         Rasgulla: {
             Description: "Soft and spongy sweet dessert made from cottage cheese",
@@ -164,7 +164,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Cottage cheese, sugar, spices",
             Rating: 4.2,
             Quantity: 150,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Creamy and rich, a delightful treat"
         },
         Jalebi: {
             Description: "Deep-fried pastry filled with onions and spices",
@@ -172,7 +172,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Flour, onions, spices",
             Rating: 3.8,
             Quantity: 100,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Crispy and sweet, a popular street food"
         },
         GajarHalwa: {
             Description: "Sweet dessert made from carrots",
@@ -196,7 +196,7 @@ const foodSchema = new mongoose.Schema({
             Ingredients: "Rice, sugar, spices",
             Rating: 4.3,
             Quantity: 150,
-            Quality: "Freshly made with high-quality ingredients"
+            Quality: "Smooth and comforting, a classic dessert"
         },
         IceCream: {
             Description: "Cold and creamy dessert",
