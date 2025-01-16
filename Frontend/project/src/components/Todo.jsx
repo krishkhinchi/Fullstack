@@ -5,37 +5,41 @@ const Todo = () => {
   const [todoList, setTodolist] = useState([]);
 
 
-  const data = () => {
+  const addTodo = () => {
     setTodolist([...todoList, todo]);
-    console.log(todo);
+    
+    
   };
 
-  const removeTodo=()=>{
+  const removeTodo=(index)=>{
      const updateTodo=[...todoList]
-     updateTodo.pop()
+updateTodo.splice(index, 1);
      setTodolist(updateTodo)
+
   }
   
-  return <>
-      <div className="grid">
+  return (<>
+     <div>
+     <div className="bg-indigo-500	">
         <input
           type="text"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
           placeholder="Input"
         />
-        <button onClick={data}>Add</button>
+        <button onClick={addTodo}>Add</button>
       </div>
 
       <ul>
         {todoList.map((item,index) => (
           <li key={index}>
             {index +" "+ item}
-            <button onClick={removeTodo}>Delete</button>
+            <button onClick={()=>removeTodo(index)}>Delete</button>
           </li> 
         ))}
       </ul>
-    </>
+     </div>
+    </>)
 };
 
 export default Todo;
