@@ -11,9 +11,17 @@
 
 import React from "react";
 import Todo from "./components/Todo";
+import Form from "./components/Form";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 export default function App() {
   return <>
-    <Todo/>      
+   <BrowserRouter>
+      <Routes>
+        <Route path="/Form" element={<Form />}/>
+        <Route path="/Todo" element={<Todo />}/>
+      </Routes>
+    </BrowserRouter>     
   </>
 }
