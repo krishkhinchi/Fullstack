@@ -15,6 +15,7 @@ export default function Form(){
       email,
       name,
     };
+    
     try {
       const response = await axios.post("http://localhost:4000/register", data);
       console.log(response.status);
