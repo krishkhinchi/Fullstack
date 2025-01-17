@@ -1,10 +1,14 @@
 const express = require("express");
 const app = express();
+var cors = require('cors')
+
 const connectDb = require("./config/db");
 const userModel = require("./model/userSchema");
 const bcrypt = require("bcrypt");
 
 connectDb();
+app.use(cors())
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -19,7 +23,7 @@ app.post("/register", async (req, res) => {
     res.send({ message: "User Exist" });
   }
   const salt = await bcrypt.genSalt();
-  console.log(salt);
+  
   const hash_password = await bcrypt.hash(password, salt);
   const newUser = new userModel({ name, email, password: hash_password });
   await newUser.save();
@@ -70,6 +74,6 @@ app.put("/update/:id", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(5000, () => {
   console.log("Server is running... ");
 });
