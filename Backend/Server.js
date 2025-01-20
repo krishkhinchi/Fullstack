@@ -1,14 +1,16 @@
 const express = require("express");
 const app = express();
 const cors = require('cors')
+const userRouter = require("./Routes/user.route")
+const router = express.Router()
 
-const connectDb = require("./config/db");
-const userModel = require("./model/userSchema");
+const connectDb = require("./Config/db");
+const userModel = require("./Model/userSchema");
 const bcrypt = require("bcrypt");
+require('dotenv').config()
 
 connectDb();
 app.use(cors())
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -16,19 +18,7 @@ app.get("/", (req, res) => {
   res.send("HEllO");
 });
 
-app.post("/register", async (req, res) => {
-  const { email, password, name } = req.body;
-  const userExist = await userModel.findOne({ email });
-  if (userExist) {
-    res.send({ message: "User Exist" });
-  }
-  const salt = await bcrypt.genSalt();
-  
-  const hash_password = await bcrypt.hash(password, salt);
-  const newUser = new userModel({ name, email, password: hash_password });
-  await newUser.save();
-  res.send({ message: "User Created Successfully" });
-});
+app.use("/user", router)
 
 app.post("/login", async (req, res) => {
   try {
@@ -74,6 +64,6 @@ app.put("/update/:id", async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server is running... ");
+app.listen(process.env.PORT, () => {
+  console.log("Server is running on port ", process.env.PORT);
 });
