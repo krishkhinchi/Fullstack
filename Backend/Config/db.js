@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-
-const uri = "mongodb://localhost:27017/MERN";
+const uri = process.env.DB_URI;
+require('dotenv').config()
 
 function connectDb() {
   mongoose
