@@ -3,22 +3,19 @@ import React, { useState } from "react";
 const Todo = () => {
   const [todo, setTodo] = useState("");
   const [todoList, setTodolist] = useState([]);
-
-
+  
   const addTodo = () => {
     setTodolist([...todoList, todo]);
-    
-    
   };
 
   const removeTodo=(index)=>{
-     const updateTodo=[...todoList]
-updateTodo.splice(index, 1);
-     setTodolist(updateTodo)
-
+    const updateTodo=[...todoList]
+    updateTodo.splice(index, 1);
+    setTodolist(updateTodo)
   }
   
-  return (<>
+  return (
+    <>
      <div>
      <div className="bg-indigo-500	">
         <input
@@ -29,7 +26,7 @@ updateTodo.splice(index, 1);
         />
         <button onClick={addTodo}>Add</button>
       </div>
-
+    
       <ul>
         {todoList.map((item,index) => (
           <li key={index}>
@@ -39,7 +36,8 @@ updateTodo.splice(index, 1);
         ))}
       </ul>
      </div>
-    </>)
+    </>
+    )
 };
 
 export default Todo;
