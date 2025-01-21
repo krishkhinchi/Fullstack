@@ -2,15 +2,13 @@ import React from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import Contact from './Contact'
+import { Link } from "react-router-dom"
 
-const Header = ({val }) => {
+const Header = () => {
   return (
-    <div>
-        {val}
-          {
-
-        val>10 ? <Footer/> : <Contact/>    
-          }  
+    <div> 
+      <Link to='/home'>Goto home page</Link>   
+      <Link to='/new'>Goto new page</Link>
     </div>
   )
 }
