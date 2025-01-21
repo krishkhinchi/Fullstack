@@ -10,18 +10,27 @@
 */
 
 import React from "react";
-import Todo from "./components/Todo";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
 import Form from "./components/Form";
+import Todo from "./components/Todo";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
-export default function App() {
-  return <>
-   <BrowserRouter>
-      <Routes>
-        <Route path="/Form" element={<Form />}/>
-        <Route path="/Todo" element={<Todo />}/>
-      </Routes>
-    </BrowserRouter>     
-  </>
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/form" element={<Form />} />
+          <Route path="/todo" element={<Todo />} />
+          <Route path="/header" element={<Header />} />
+          <Route path="/footer" element={<Footer />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
+
+export default App;
